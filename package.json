@@ -1,0 +1,28 @@
+{
+  "name": "everywhere-everyone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ascott1/course.git"
+  },
+  "author": "Adam D Scott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ascott1/course/issues"
+  },
+  "homepage": "https://github.com/ascott1/course#readme",
+  "dependencies": {
+    "body-parser": "1.16.0",
+    "ejs": "2.5.5",
+    "express": "4.14.1",
+    "lowdb": "^0.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.11.0"
+  }
+}

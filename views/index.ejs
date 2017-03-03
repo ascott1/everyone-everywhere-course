@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MarsBQ</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>MarsBQ</h1>
+    <p>Join us for the first intergalactic BBQ</p>
+    <h2>Saturday November 5, 2056</h2>
+    <a href="#register" class="btn">Register to Attend</a>
+  </header>
+
+  <div id="date">
+    <h2>Countdown</h2>
+    <ul>
+      <li><%= dates.years %> years</li>
+      <li><%= dates.days %> days</li>
+      <li><%= dates.hours %> hours</li>
+      <li><%= dates.minutes %> minutes</li>
+    </ul>
+  </div>
+
+  <div id="attendees">
+    <h2>Attendees</h2>
+    <ul id="name-list">
+    <% for(var i=0; i<names.length; i++) {%>
+      <li>
+        <%= names[i] %>
+      </li>
+    <% } %>
+    </ul>
+  </div>
+
+  <footer class="footer-container">
+    <div class="wrap">
+      <small>&copy; <%= new Date().getFullYear() %> Snacks in Space</small>
+    </div>
+  </footer>
+
+
+  <script src="main.js"></script>
+</body>
+</html>
