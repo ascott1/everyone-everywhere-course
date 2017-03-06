@@ -22,6 +22,19 @@ app.get('/', function(req, res) {
   res.render('index', { names: nameValues, dates: dates()});
 })
 
+app.post('/names', function(req, res) {
+
+  console.log(req.body)
+
+  db.get('names')
+    .push({
+      name: req.body.first + ' ' + req.body.last
+    })
+    .value();
+
+  res.redirect('/');
+})
+
 app.listen(3000, function() {
   console.log('listening on 3000');
 })
