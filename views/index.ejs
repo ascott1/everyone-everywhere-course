@@ -2,37 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport"content="width=device-width, initial-scale=1">
   <title>MarsBQ</title>
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>MarsBQ</h1>
-    <p>Join us for the first intergalactic BBQ</p>
-    <h2>Saturday November 5, 2056</h2>
-    <a href="#register" class="btn">Register to Attend</a>
+  <header class="header-container">
+    <nav class="site-nav">
+      <div class="wrap">
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Travel</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Venue</a></li>
+        </ul>
+      </div>
+    </nav>
+      <div class="wrap">
+        <h1>MarsBQ</h1>
+        <p>Join us for the first intergalactic BBQ</p>
+        <h2>Saturday November 5, 2056</h2>
+        <a href="#register" class="btn">Register to Attend</a>
+      </div>
   </header>
 
-  <div id="date">
-    <h2>Countdown</h2>
-    <ul>
-      <li><%= dates.years %> years</li>
-      <li><%= dates.days %> days</li>
-      <li><%= dates.hours %> hours</li>
-      <li><%= dates.minutes %> minutes</li>
-    </ul>
+  <div id="date" class="countdown-container">
+    <div class="wrap">
+      <ul class="countdown-list">
+        <li><span class="countdown-time"><%= dates.years %></span> years</li>
+        <li><span class="countdown-time"><%= dates.days %></span> days</li>
+        <li><span class="countdown-time"><%= dates.hours %></span> hours</li>
+        <li><span class="countdown-time"><%= dates.minutes %></span> minutes</li>
+      </ul>
+    </div>
   </div>
 
-  <div id="attendees">
-    <h2>Attendees</h2>
-    <ul id="name-list">
-    <% for(var i=0; i<names.length; i++) {%>
-      <li>
-        <%= names[i] %>
-      </li>
-    <% } %>
-    </ul>
+
+  <div id="attendees" class="attendee-container">
+    <div class="wrap">
+      <h2>Attendees</h2>
+      <ul id="name-list">
+      <% for(var i=0; i<names.length; i++) {%>
+        <li>
+          <%= names[i] %>
+        </li>
+      <% } %>
+      </ul>
+    </div>
   </div>
 
   <footer class="footer-container">
