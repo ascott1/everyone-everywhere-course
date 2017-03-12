@@ -1,3 +1,27 @@
 body {
   font-family: sans-serif;
 }
+
+img,
+obj,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Base Styles */
+/* device agnostic baseline styles */
+
+
+@media (max-width: 600px) {
+  /* Smaller device/browser styles */
+}
+@media (min-width: 601px) { 
+  /* Large device/browser styles */
+}
+@media (min-width: 850px) { 
+  /* Larger device/browser styles */
+}
+@media (min-width: 1100px) {
+  /* Largest device/browser styles */
+}
