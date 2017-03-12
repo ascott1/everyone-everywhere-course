@@ -19,7 +19,7 @@ video {
 
 .wrap {
   margin: 0 auto;
-  padding: 2em 1em;
+  padding: 1em 1em;
 }
 
 h2 {
@@ -55,9 +55,44 @@ a:focus {
   background: #F2F2EC;
 }
 
+/* navigation styles */
+
+/* navigation */
+.site-nav {
+  background-color: #A05035;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-list a:link,
+.nav-list a:visited {
+  color: #F2F2EC;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  text-decoration: none;
+}
+
 
 @media (max-width: 600px) {
-  /* Smaller device/browser styles */
+
+  .nav-list a {
+    display: block;
+    text-decoration: none;
+  }
+
+  .nav-list li {
+    text-align: center;
+    border-bottom: 1px solid #F2F2EC;
+    padding: 1em;
+  }
+
+  .nav-list li:hover {
+    border-bottom: 1px dashed #F2F2EC;
+  }
 }
 
 @media (min-width: 601px) {
@@ -71,6 +106,12 @@ a:focus {
   /* header */
   .header-container {
     text-align: center;
+  }
+
+  /* navigation list */
+  .nav-list li {
+    display: inline-block;
+    padding: 0 1em;
   }
 
   /* register button styles */
