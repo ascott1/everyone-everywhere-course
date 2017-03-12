@@ -1,5 +1,13 @@
+/* Base Styles */
+/* device agnostic baseline styles */
+
 body {
   font-family: sans-serif;
+  color: #523E25;
+  font-size: 1em;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
 }
 
 img,
@@ -9,19 +17,128 @@ video {
     height: auto;
 }
 
-/* Base Styles */
-/* device agnostic baseline styles */
+.wrap {
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+/* link styles */
+a:link,
+a:visited {
+  color: #A05035
+}
+
+a:hover,
+a:focus {
+  color: #7F0000;
+}
+
+/* container styles */
+.header-container {
+  background: #DDC83A;
+}
+
+.countdown-container {
+  background: #F2F2EC;
+}
+
+.registration-container {
+  background: #A05035;
+  color: #F2F2EC;
+}
+
+.footer-container {
+  background: #F2F2EC;
+}
 
 
 @media (max-width: 600px) {
   /* Smaller device/browser styles */
 }
-@media (min-width: 601px) { 
+
+@media (min-width: 601px) {
   /* Large device/browser styles */
+
+  /* layout */
+  .wrap {
+    max-width: 1100px;
+  }
+
+  /* header */
+  .header-container {
+    text-align: center;
+  }
+
+  /* register button styles */
+  .btn {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.6em;
+    padding: 1em;
+    text-decoration: none;
+  }
+
+  .btn:link,
+  .btn:visited {
+    color: #F2F2EC;
+    background: #A05035;
+  }
+
+  .btn:hover,
+  .btn:focus {
+    background: #7F0000;
+  }
+
+  /* countdown display */
+  .countdown-list {
+    text-align: center;
+    width: 100%;
+  }
+
+  .countdown-list li {
+    display: inline-block;
+    padding: 0 3em;
+  }
+
+  .countdown-time {
+    font-size: 2.25em;
+    font-weight: bold;
+    display: block;
+  }
+
+  /* form fields */
+  input {
+    font-size: 1.125em;
+    padding: 10px;
+  }
+
+  .submit-button {
+    background-color: #F2F2EC;
+    color: #A05035;
+    border: none;
+    font-size: 1.125em;
+    padding: 12px;
+    cursor: pointer;
+  }
+
+  .submit-button:hover,
+  .submit-button:focus {
+    background-color: #e6e6e7;
+  }
+
 }
-@media (min-width: 850px) { 
+
+@media (min-width: 850px) {
   /* Larger device/browser styles */
+
 }
+
 @media (min-width: 1100px) {
   /* Largest device/browser styles */
 }
