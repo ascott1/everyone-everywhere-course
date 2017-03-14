@@ -153,6 +153,11 @@ a:focus {
     display: block;
   }
 
+  /* registration container */
+  .registration-container {
+    padding: 2em 0;
+  }
+
   /* form fields */
   input {
     font-size: 1.125em;
