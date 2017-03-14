@@ -128,12 +128,12 @@ a:focus {
   .btn:link,
   .btn:visited {
     color: #F2F2EC;
-    background: #A05035;
+    background: #BA816D;
   }
 
   .btn:hover,
   .btn:focus {
-    background: #7F0000;
+    background: #A05035;
   }
 
   /* countdown display */
