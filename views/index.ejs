@@ -45,9 +45,16 @@
       <div class="wrap">
         <h2>Register</h2>
         <form action="/names" method="POST" id="sign-up">
-          <input type="text" placeholder="First Name" name="first" id="first">
-          <input type="text" placeholder="Last Name" name="last" id="last">
-          <button type="submit" id="submit" class="submit-button">Submit</button>
+          <fieldset>
+            <legend>Registration form</legend>
+            <label for="first">First:
+              <input type="text" placeholder="Adam" name="first" id="first">
+            </label>
+            <label for="last">Last:
+              <input type="text" placeholder="Scott" name="last" id="last">
+            </label>
+            <button type="submit" id="submit" class="submit-button">Submit</button>
+          </fieldset>
         </form>
       </div>
     </div>
