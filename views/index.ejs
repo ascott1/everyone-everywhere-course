@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header-container">
-    <nav class="site-nav">
+  <header class="header-container" role="banner">
+    <nav class="site-nav" role="navigation">
       <div class="wrap">
         <ul class="nav-list">
           <li><a href="#">Home</a></li>
@@ -28,42 +28,44 @@
       </div>
   </header>
 
-  <div id="date" class="countdown-container">
-    <div class="wrap">
-      <ul class="countdown-list">
-        <li><span class="countdown-time"><%= dates.years %></span> years</li>
-        <li><span class="countdown-time"><%= dates.days %></span> days</li>
-        <li><span class="countdown-time"><%= dates.hours %></span> hours</li>
-        <li><span class="countdown-time"><%= dates.minutes %></span> minutes</li>
-      </ul>
+  <main role="main">
+    <div id="date" class="countdown-container">
+      <div class="wrap">
+        <ul class="countdown-list">
+          <li><span class="countdown-time"><%= dates.years %></span> years</li>
+          <li><span class="countdown-time"><%= dates.days %></span> days</li>
+          <li><span class="countdown-time"><%= dates.hours %></span> hours</li>
+          <li><span class="countdown-time"><%= dates.minutes %></span> minutes</li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div id="register" class="registration-container">
-    <div class="wrap">
-      <h2>Register</h2>
-      <form action="/names" method="POST" id="sign-up">
-        <input type="text" placeholder="First Name" name="first" id="first">
-        <input type="text" placeholder="Last Name" name="last" id="last">
-        <button type="submit" id="submit" class="submit-button">Submit</button>
-      </form>
+    <div id="register" class="registration-container">
+      <div class="wrap">
+        <h2>Register</h2>
+        <form action="/names" method="POST" id="sign-up">
+          <input type="text" placeholder="First Name" name="first" id="first">
+          <input type="text" placeholder="Last Name" name="last" id="last">
+          <button type="submit" id="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <div id="attendees" class="attendee-container">
-    <div class="wrap">
-      <h2>Attendees</h2>
-      <ul id="name-list">
-      <% for(var i=0; i<names.length; i++) {%>
-        <li>
-          <%= names[i] %>
-        </li>
-      <% } %>
-      </ul>
+    <div id="attendees" class="attendee-container">
+      <div class="wrap">
+        <h2>Attendees</h2>
+        <ul id="name-list">
+        <% for(var i=0; i<names.length; i++) {%>
+          <li>
+            <%= names[i] %>
+          </li>
+        <% } %>
+        </ul>
+      </div>
     </div>
-  </div>
+  </main>
 
-  <footer class="footer-container">
+  <footer class="footer-container" role="contentinfo">
     <div class="wrap">
       <small>&copy; <%= new Date().getFullYear() %> Snacks in Space</small>
     </div>
