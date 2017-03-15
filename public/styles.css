@@ -51,7 +51,7 @@ h2 {
 /* link styles */
 a:link,
 a:visited {
-  color: #A05035
+  color: #AF5F44;
 }
 
 a:hover,
@@ -162,12 +162,12 @@ legend {
   .btn:link,
   .btn:visited {
     color: #F2F2EC;
-    background: #BA816D;
+    background: #A05035;
   }
 
   .btn:hover,
   .btn:focus {
-    background: #A05035;
+    background: #AA422F;
   }
 
   /* countdown display */
