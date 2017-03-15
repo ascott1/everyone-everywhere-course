@@ -6,8 +6,7 @@ var submitRequest = function(e) {
   e.preventDefault();
 
   var data = {
-    'first': document.getElementById('first').value,
-    'last': document.getElementById('last').value
+    'name': document.getElementById('full-name').value
   }
 
   xhr = new XMLHttpRequest()
@@ -18,9 +17,9 @@ var submitRequest = function(e) {
   appendNewItem(data)
 }
 
-var appendNewItem = function(name) {
+var appendNewItem = function(data) {
   let li = document.createElement('li')
-  li.appendChild(document.createTextNode(name.first + ' ' + name.last))
+  li.appendChild(document.createTextNode(data.name))
   ul.appendChild(li)
   form.reset()
 }

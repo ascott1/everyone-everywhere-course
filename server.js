@@ -28,7 +28,7 @@ app.post('/names', function(req, res) {
 
   db.get('names')
     .push({
-      name: req.body.first + ' ' + req.body.last
+      name: req.body.name
     })
     .value();
 
