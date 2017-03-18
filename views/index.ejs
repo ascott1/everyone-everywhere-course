@@ -45,13 +45,34 @@
       <div class="wrap">
         <h2>Register</h2>
         <form action="/names" method="POST" id="sign-up">
-          <fieldset>
-            <legend>Registration form</legend>
-            <label for="full-name">Name:
-              <input type="text" placeholder="Adam Scott" name="name" id="full-name">
-            </label>
+          <label for="full-name"><span class="title-label">Name:</span>
+            <input type="text" placeholder="Adam Scott" name="name" id="full-name">
+          </label>
+
+            <fieldset id="gender">
+                <legend>Gender</legend>
+                <ul>
+                    <li>
+                      <label for="gender-f">
+                        <input type="radio" id="gender-f" name="gender" value="Female">
+                        Female
+                      </label>
+                    </li>
+                    <li>
+                      <label for="gender-m">
+                        <input type="radio" id="gender-m" name="gender" value="Male">
+                        Male
+                      </label>
+                    </li>
+                    <li>
+                      <label for="gender-c"><span class="title-label">Custom:</span>
+                        <input type="radio" id="gender-c" name="gender" value="Custom">
+                        <input type="text" id="gender-c-text" name="gender">
+                      </label>
+                    </li>
+                </ul>
+              </fieldset>
             <button type="submit" id="submit" class="submit-button">Submit</button>
-          </fieldset>
         </form>
       </div>
     </div>

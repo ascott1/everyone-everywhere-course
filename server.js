@@ -24,11 +24,20 @@ app.get('/', function(req, res) {
 
 app.post('/names', function(req, res) {
 
-  console.log(req.body)
+  var gender = req.body.gender;
+
+  if (Array.isArray(gender) && gender[1].length > 0) {
+    gender = gender[1];
+  } else if (!Array.isArray(gender)) {
+    gender = gender;
+  } else {
+    gender = gender[0];
+  }
 
   db.get('names')
     .push({
-      name: req.body.name
+      name: req.body.name,
+      gender: gender
     })
     .value();
 
