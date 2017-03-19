@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MarsBQ</title>
+
+  <style type="text/css">
+    body {
+      font-family: sans-serif;
+      color: #523e25;
+      font-size: 1em;
+      line-height: 1.4;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .visuallyhidden {
+      border: 0;
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    .wrap {
+      margin: 0 auto;
+      padding: 1em 1em;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    a:link,
+    a:visited {
+      color: #af5f44;
+    }
+
+    .header-container {
+      background: #ddc83a;
+    }
+
+    .countdown-container {
+      background: #f2f2ec;
+    }
+
+    .registration-container {
+      background: #a05035;
+      color: #f2f2ec;
+    }
+
+    .site-nav {
+      background-color: #a05035;
+    }
+
+    .nav-list {
+      list-style: none;
+    }
+
+    .nav-list a:link,
+    .nav-list a:visited {
+      color: #f2f2ec;
+    }
+
+    @media (max-width:600px) {
+      .nav-list a {
+        display: block;
+        text-decoration: none;
+      }
+
+      .nav-list li {
+        text-align: center;
+        border-bottom: 1px solid #f2f2ec;
+        padding: 1em;
+      }
+    }
+
+    @media (min-width:601px) {
+      .wrap {
+        max-width: 1100px;
+      }
+
+      .header-container {
+        text-align: center;
+      }
+
+      .nav-list li {
+        display: inline-block;
+        padding: 0 1em;
+      }
+
+      .btn {
+        display: block;
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.6em;
+        padding: 1em;
+        text-decoration: none;
+      }
+
+      .btn:link,
+      .btn:visited {
+        color: #f2f2ec;
+        background: #a05035;
+      }
+
+      .countdown-list {
+        text-align: center;
+        width: 100%;
+      }
+
+      .countdown-list li {
+        display: inline-block;
+        padding: 0 3em;
+      }
+
+      .countdown-time {
+        font-size: 2.25em;
+        font-weight: 700;
+        display: block;
+      }
+
+      .registration-container {
+        padding: 2em 0;
+      }
+    }
+
+  </style>
+  <link rel="preload" href="styles.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
+  <script>!function(e){"use strict";var t=function(t,n,r){function o(e){return i.body?e():void setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r,r.getAttribute("media")),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){t.poly(),e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);</script>
+</head>
+<body>
+  <a href="#main-content" class="visuallyhidden">Skip to main content</a>
+  <header class="header-container" role="banner">
+    <nav class="site-nav" role="navigation">
+      <div class="wrap">
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Travel</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Venue</a></li>
+        </ul>
+      </div>
+    </nav>
+      <div class="wrap">
+        <img src="marsbq_logo.png" alt="Mars BQ">
+        <p>Join us for the first intergalactic BBQ</p>
+        <h2>Saturday November 5, 2056</h2>
+        <a href="#register" class="btn">Register to Attend</a>
+      </div>
+  </header>
+
+  <main role="main" id="main-content">
+    <div id="date" class="countdown-container">
+      <div class="wrap">
+        <ul class="countdown-list">
+          <li><span class="countdown-time"><%= dates.years="" %=""></%=></span> years</li>
+          <li><span class="countdown-time"><%= dates.days="" %=""></%=></span> days</li>
+          <li><span class="countdown-time"><%= dates.hours="" %=""></%=></span> hours</li>
+          <li><span class="countdown-time"><%= dates.minutes="" %=""></%=></span> minutes</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="register" class="registration-container">
+      <div class="wrap">
+        <h2>Register</h2>
+        <form action="/names" method="POST" id="sign-up">
+          <label for="full-name"><span class="title-label">Name:</span>
+            <input type="text" placeholder="Adam Scott" name="name" id="full-name">
+          </label>
+
+            <fieldset id="gender">
+                <legend>Gender</legend>
+                <ul>
+                    <li>
+                      <label for="gender-f">
+                        <input type="radio" id="gender-f" name="gender" value="Female">
+                        Female
+                      </label>
+                    </li>
+                    <li>
+                      <label for="gender-m">
+                        <input type="radio" id="gender-m" name="gender" value="Male">
+                        Male
+                      </label>
+                    </li>
+                    <li>
+                      <label for="gender-c"><span class="title-label">Custom:</span>
+                        <input type="radio" id="gender-c" name="gender" value="Custom">
+                        <input type="text" id="gender-c-text" name="gender">
+                      </label>
+                    </li>
+                </ul>
+              </fieldset>
+            <button type="submit" id="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="attendees" class="attendee-container">
+      <div class="wrap">
+        <h2>Attendees</h2>
+        <ul id="name-list">
+        <% for(var="" i="0;" i<names.length;="" i++)="" {%="">
+          <li>
+            <%= names[i]="" %="">
+          </%=></li>
+        <% }="" %="">
+        </%></%></ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-container" role="contentinfo">
+    <div class="wrap">
+      <small>&copy; <%= new="" date().getfullyear()="" %=""> Snacks in Space</%=></small>
+    </div>
+  </footer>
+
+
+  <script src="main.min.js"></script>
+</body>
+</html>

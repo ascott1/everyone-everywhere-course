@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "minify:img": "imageoptim --directory public",
+    "minify:css": "cleancss -o public/styles.min.css public/styles.css",
+    "minify:js": "uglifyjs public/main.js -o public/main.min.js",
+    "watch": "watch 'npm run minify:css && npm run minify:js' public"
   },
   "repository": {
     "type": "git",
@@ -24,6 +28,7 @@
     "lowdb": "^0.14.0"
   },
   "devDependencies": {
-    "nodemon": "1.11.0"
+    "nodemon": "1.11.0",
+    "watch": "^1.0.2"
   }
 }

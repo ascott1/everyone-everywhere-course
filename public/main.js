@@ -27,7 +27,7 @@ var submitRequest = function(e) {
 }
 
 var appendNewItem = function(data) {
-  let li = document.createElement('li')
+  var li = document.createElement('li')
   li.appendChild(document.createTextNode(data.name))
   ul.appendChild(li)
   form.reset()
