@@ -1,8 +1,16 @@
 /* Base Styles */
 /* device agnostic baseline styles */
 
+@font-face {
+    font-family: 'Open-Sans';
+    src: url('fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Open-Sans', sans-serif;
   color: #523E25;
   font-size: 1em;
   line-height: 1.4;
